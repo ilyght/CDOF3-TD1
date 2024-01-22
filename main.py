@@ -19,7 +19,7 @@ while (rep !=0):
     print("*~TO DO LIST~*")
     for i in list:
         print(i)
-    rep = input("\n\t~menu~\n\nto create a new task, hit 1\nto finish a task, hit 2\nto delete a task, hit 3\nto quit menu, hit 0\nnumber : ")
+    rep = input("\n\t~menu~\nto create a new task, hit 1\nto finish a task, hit 2\nto delete a task, hit 3\nto quit menu, hit 0\nnumber : ")
     match rep:
         case "1":
             name = input("what's the task ?\nname : ")
