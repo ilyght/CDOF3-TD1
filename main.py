@@ -4,7 +4,7 @@ class Task:
         self.done = False
     
     def __str__(self):
-        string = self.task+"\n"
+        string = self.task
         if self.done == False:
             string="o "+string
         else:
@@ -15,10 +15,11 @@ class Task:
 rep = 1
 list = []
 while (rep !=0):
-    print("*~TO DO LIST~*\n")
+    print("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*")
+    print("*~TO DO LIST~*")
     for i in list:
         print(i)
-    rep = input("\t~menu~\n\nto create a new task, hit 1\nto finish a task, hit 2\nto delete a task, hit 3\nto quit menu, hit 0\nnumber : ")
+    rep = input("\n\t~menu~\n\nto create a new task, hit 1\nto finish a task, hit 2\nto delete a task, hit 3\nto quit menu, hit 0\nnumber : ")
     match rep:
         case "1":
             name = input("what's the task ?\nname : ")
@@ -31,15 +32,17 @@ while (rep !=0):
             name = input("what's the task ?\nname : ")
             for i in list:
                 if i.task==name:
-                    list.remove(i)
-                    print("task removed\n")
+                    i.done=True
+                    print("task marked as done ! \n")
+
         case "3": 
             name = input("what's the task ?\nname : ")
             for i in list:
                 if i.task==name:
-                    i.done=True
-                    print("task marked as done ! \n")
+                    list.remove(i)
+                    print("task removed\n")
                     break
+
             print("task not found, try again\n")          
         case "0":
          break
