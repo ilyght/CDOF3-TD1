@@ -10,7 +10,6 @@ Ce code Python crée une ToDoList, comme une liste de choses à faire. Imaginez-
 
 
 
-
 ## Installation
 
 Assurez-vous de disposer d'un environnement Python fonctionnel. Pour configurer et exécuter le projet, suivez les étapes suivantes :
