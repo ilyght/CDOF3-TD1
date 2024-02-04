@@ -4,6 +4,12 @@
 
 Ce projet est une simple application de gestion des tâches en ligne de commande. Il permet aux utilisateurs d'ajouter des tâches, de marquer des tâches comme faites, de supprimer des tâches et de voir la liste des tâches en cours. L'objectif de ce projet est d'aider les utilisateurs à gérer leurs tâches de manière simple et efficace.
 
+
+Ce code Python crée une ToDoList, comme une liste de choses à faire. Imaginez-la comme une liste magique où vous pouvez ajouter des tâches, les marquer comme terminées et même les supprimer. Chaque tâche est comme une petite quête, et vous avez un menu simple pour ajouter, marquer comme terminé, ou supprimer des tâches. C'est comme si vous aviez un assistant personnel pour vous aider à organiser vos devoirs ou vos activités. Vous pouvez utiliser le menu en tapant des chiffres, et lorsque vous voulez partir, il vous suffit de taper 0. Voilà, une sorte de magie pour rendre la gestion des tâches amusante et facile ! 🌟
+
+
+
+
 ## Installation
 
 Assurez-vous de disposer d'un environnement Python fonctionnel. Pour configurer et exécuter le projet, suivez les étapes suivantes :
@@ -36,3 +42,8 @@ Ce projet est sous licence selon les termes spécifiés dans le fichier `setup.p
 - Assurez-vous de suivre les indications fournies par le programme pendant son exécution pour une utilisation optimale.
 
 Profitez de votre gestion de tâches simplifiée avec cette application en ligne de commande !
+
+
+
+
+
