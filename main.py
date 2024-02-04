@@ -16,25 +16,41 @@ class ToDoList:
         self.tasks = []
 
     def add_task(self, task_name):
+        task_name = task_name.strip()  # Remove leading/trailing spaces
+        if not task_name:
+            print("\033[33mTask name cannot be empty, try again\033[0m\n")
+            return
+
         for task in self.tasks:
-            if task.task == task_name:
+            if task.task.lower() == task_name.lower():
                 print("\033[33mTask already exists, try again\033[0m\n")
                 return
         self.tasks.append(Task(task_name))
+        print("\033[1;32mTask added!\033[0m\n")
 
     def mark_task_as_done(self, task_name):
+        task_name = task_name.strip()  # Remove leading/trailing spaces
+        if not task_name:
+            print("\033[33mTask name cannot be empty, try again\033[0m\n")
+            return
+
         for task in self.tasks:
-            if task.task == task_name:
+            if task.task.lower() == task_name.lower():
                 task.mark_as_done()
-                print("\033[1;32m Task marked as done!\n")
+                print("\033[1;32mTask marked as done!\033[0m\n")
                 return
         print("\033[33mTask not found, try again\033[0m\n")
 
     def remove_task(self, task_name):
+        task_name = task_name.strip()  # Remove leading/trailing spaces
+        if not task_name:
+            print("\033[33mTask name cannot be empty, try again\033[0m\n")
+            return
+
         for task in self.tasks:
-            if task.task == task_name:
+            if task.task.lower() == task_name.lower():
                 self.tasks.remove(task)
-                print("\033[1;32m Task removed\n")
+                print("\033[1;32mTask removed!\033[0m\n")
                 return
         print("\033[33mTask not found, try again\033[0m\n")
 
@@ -59,6 +75,10 @@ def main():
             "To quit the menu, hit 0\n"
             "Number: \033[0m"
         )
+
+        if not user_choice.isdigit():
+            print("\033[33mIncorrect number, try again\033[0m\n")
+            continue
 
         if user_choice == "1":
             task_name = input("\033[96mWhat's the task?\nName: \033[0m")
